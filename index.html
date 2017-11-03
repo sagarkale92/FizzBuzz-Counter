@@ -10,8 +10,10 @@
                 <div class="main-container">
                     <div class="content title"><h2>FizzBuzz Counter</h2></div>
                     <div class="content count">
-                        <span id="counter">0</span>
-                        <h5>Counter</h5>
+                        <div id="counter">0</div>
+                    </div>
+                    <div class="content">
+                        <progress max="0" value="0"></progress>
                     </div>
                     <div class="content userinput">
                         <input id="input" type="number" placeholder="Enter Number" />
@@ -21,7 +23,7 @@
                     </div>
                     <div class="content error" id="error">
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-                        Number should be greater than 0
+                        The number cannot be empty or less than zero.
                     </div>
                     <div class="content output">
                         <div id="fingers" class="figure"><h2>FINGERS</h2></div>
