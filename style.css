@@ -4,12 +4,13 @@ body {
 }
 
 #container {
-	padding: 100px 0;
+	overflow: auto;
+	padding: 5% 0;
     
     background-image:url('background.jpg');
     
     /* Full height */
-    height: 100%;
+    height: 120%;
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -20,25 +21,107 @@ body {
 .jumbotron { 
 	border-radius: 25px;
 	width: 40%;
-	padding: 5%;
+	padding: 3%;
 	margin: 0 0 0 4%;
-	background-color:rgba(238,238,238,0.8);
+	background-color:rgba(90, 73, 57, 0.6);
 }
 
 .main-container {
 	overflow: auto;
 	height: 20%;
 	margin: 0 auto;
-	padding: 15% 5%;
+	padding: 5% 5%;
 	background-color: white;
 	text-align: center;
 }
 
-#fingers, #toes{
-  border: 1px solid black;
+.content{
+	width: 100%; 
+	padding: 2% 0;
 }
 
-#error{
-  display: none;
-  color: red;
+input[type=number]{
+	width: 100%;
+	padding: 12px 20px;
+	display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+	width: 100%;
+	background-color: #5a4937;
+	color: white;
+	padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.error{
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    display: none;
+}
+
+.closebtn {
+    margin: 0 2% 0 0 ;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.title{
+	font-weight: bold;
+	color: #bb8967;
+	text-transform: uppercase;
+}
+
+.output{
+	display: table;
+}
+
+.figure{
+	width: 46%;
+	float: left;
+	padding: 1%;
+	background-color:rgba(159, 124, 104, 0.2);
+	border-radius: 4px;
+}
+
+#fingers{
+	margin: 0 2% 0 0;
+}
+
+#toes{
+	margin: 0 0 0 2%;
+}
+
+@media (max-width : 1024px) {
+	.jumbotron {
+		margin: 0 auto;
+		width: 80%;
+	}
+}
+
+@media (max-width : 512px) {
+	.figure{
+		width: 100%;
+		padding: 0;
+	}
+	#fingers, #toes{
+		margin: 2% auto;
+	}
 }

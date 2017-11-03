@@ -8,16 +8,29 @@
         <div id="container">
             <div class="jumbotron">
                 <div class="main-container">
-                    <lable>Enter No.</lable>
-                    <input id="input" name="counter"/>
-                    <button class="play" onclick="play()">Play</button>
-                    Counter: <span id="counter">0</span>
-                    <div id="error">Number is not valid</div>
-                    <span id="fingers">fingers</span>
-                    <span id="toes">toes</span>
-                    <br>
-                    <button class="reset" onclick="reset()">Reset</button>
-                    <button class="restart" onclick="restart()">Restart</button>
+                    <div class="content title"><h2>FizzBuzz Counter</h2></div>
+                    <div class="content count">
+                        <span id="counter">0</span>
+                        <h5>Counter</h5>
+                    </div>
+                    <div class="content userinput">
+                        <input id="input" type="number" placeholder="Enter Number" />
+                    </div>
+                    <div class="content">
+                        <input type="submit" value="Play" onclick="play();">
+                    </div>
+                    <div class="content error" id="error">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                        Number should be greater than 0
+                    </div>
+                    <div class="content output">
+                        <div id="fingers" class="figure"><h2>FINGERS</h2></div>
+                        <div id="toes" class="figure"><h2>TOES</h2></div>
+                    </div>
+                    <div class="content">
+                        <input type="submit" value="Reset" onclick="reset();">
+                        <input type="submit" value="Restart" onclick="restart();">
+                    </div>
                 </div>
             </div>
         </div>

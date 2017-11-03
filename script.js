@@ -5,6 +5,8 @@ var inputfield = document.getElementById('input');
 var timer = null;
 var fingers = document.getElementById('fingers');
 var toes = document.getElementById('toes'); 
+var error = document.getElementById('error');
+
 function reset(){
   //alert("reset");
   clearInterval(timer);
@@ -14,6 +16,7 @@ function reset(){
   counterElement.innerHTML = counter;
   resetFingers();
   resetToes();
+  hideError();
 }
 
 function restart(){
@@ -23,6 +26,7 @@ function restart(){
   counterElement.innerHTML = counter;
   resetFingers();
   resetToes();
+  hideError();
   feezbuzz();
 }
 
@@ -74,11 +78,25 @@ function feezbuzz(){
   },(1000));
 }
 
+function showError(){
+  error.style.display = "block";
+}
+
+function hideError(){
+  error.style.display = "none";
+}
+
 function play(){
   clearInterval(timer);
   var num = parseInt(inputfield.value);
-  upperLimit += num;
-  //alert(upperLimit);
-  feezbuzz();
+  if(num > 0){
+    hideError();
+    upperLimit += num;
+    //alert(upperLimit);
+    feezbuzz();
+  }
+  else{
+    showError();
+  }
 }
 
